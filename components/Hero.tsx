@@ -17,13 +17,12 @@ export default function Hero() {
           </div>
         </div>
 
-        <h1 className="text-5xl md:text-6xl font-bold mb-6 gradient-text">
-          Bienvenue sur mon Portfolio
-        </h1>
-
-        <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
-          Je suis une développeuse curieuse et rigoureuse, dédié à la construction du numérique de demain, un commit à la fois.
-        </p>
+         <h1 className="text-5xl md:text-6xl font-bold mb-6 gradient-text">
+           Evanne Kettering
+         </h1>
+         <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
+           Je transforme des idées en solutions projets innovants et performants, un commit à la fois.
+         </p>
 
         <div className="flex gap-4 justify-center flex-wrap">
           <a

@@ -31,6 +31,32 @@ const contactLinks = [
 ];
 
 export default function Contact() {
+  const professionalLinks = [
+    {
+      name: 'LinkedIn',
+      icon: Linkedin,
+      href: 'https://linkedin.com/in/evanne-kettering-73443238b/',
+      color: 'bg-blue-700',
+    },
+    {
+      name: 'GitHub',
+      icon: Github,
+      href: 'https://github.com/Evanne27',
+      color: 'bg-gray-900',
+    },
+    {
+      name: 'Email',
+      icon: Mail,
+      href: 'mailto:ekettering67@free.fr',
+      color: 'bg-red-500',
+    },
+    {
+      name: 'Instagram',
+      icon: Instagram,
+      href: 'https://www.instagram.com/evanne.ktng/',
+      color: 'bg-blue-400',
+    },
+  ];
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -38,15 +64,29 @@ export default function Contact() {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Simulate form submission
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  try {
+    const response = await fetch('https://formspree.io/f/mgoqlkva', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+    if (response.ok) {
+      setSubmitted(true);
       setFormData({ name: '', email: '', message: '' });
-    }, 3000);
-  };
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 3000);
+    } else {
+      console.error('Failed to send message');
+    }
+  } catch (error) {
+    console.error('Error sending message:', error);
+  }
+};
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -97,6 +137,32 @@ export default function Contact() {
                 Je réponds généralement dans les 24 heures. N'hésitez pas à me contacter pour
                 discuter de vos projets ou simplement dire bonjour!
               </p>
+            </div>
+
+            {/* Professional Networks */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-blue-100">
+              <h3 className="text-xl font-bold text-gray-900 mb-6">Mes réseaux professionnels</h3>
+              <div className="grid grid-cols-2 gap-4">
+                {professionalLinks.map((link) => {
+                  const Icon = link.icon;
+                  return (
+                    <a
+                      key={link.name}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 p-4 rounded-lg hover:bg-gray-50 transition-colors group border border-gray-200"
+                    >
+                      <div
+                        className={`${link.color} p-2 rounded-lg text-white group-hover:scale-110 transition-transform`}
+                      >
+                        <Icon className="w-5 h-5" />
+                      </div>
+                      <span className="font-semibold text-gray-900">{link.name}</span>
+                    </a>
+                  );
+                })}
+              </div>
             </div>
           </div>
 

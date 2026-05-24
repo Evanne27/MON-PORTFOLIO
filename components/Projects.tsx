@@ -7,9 +7,9 @@ const projects = [
     id: 1,
     title: 'ETODO',
     description: 'Manager de tâches pour les employés et managers',
-    image: '',
-    tech: ['Next.js'],
-    github: 'https://github.com',
+    image: '/etodo.png',
+    tech: ['Next.js', 'React', 'TypeScript'],
+   
     challenges: ['Gestion d\'état complexe', 'Synchronisation temps réel', 'Authentification utilisateurs'],
     learnings: ['Architecture Next.js avancée', 'Gestion d\'équipes multiples', 'UX pour managers et employés'],
   },
@@ -17,10 +17,9 @@ const projects = [
     id: 2,
     title: 'CV Perso',
     description: 'Première création web, CV numérique et interactif',
-    image: '',
-    tech: ['HTML', 'CSS', 'JS'],
-    github: 'https://github.com',
-    live: 'https://example.com',
+    image: '/resume.png',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    
     challenges: ['Débuter avec HTML/CSS', 'Animation JavaScript simple', 'Responsive design'],
     learnings: ['Fondamentaux du web', 'Interaction utilisateur', 'Structuration d\'un projet'],
   },
@@ -28,10 +27,9 @@ const projects = [
     id: 3,
     title: 'CV en duo',
     description: 'Collaboration sur portfolio collaboratif',
-    image: '',
+    image: '/CVduo.png',
     tech: ['Next.js', 'Markdown', 'Tailwind CSS'],
-    github: 'https://github.com',
-    live: 'https://example.com',
+  
     challenges: ['Travail en équipe', 'Harmoniser les styles', 'Gestion de versions'],
     learnings: ['Collaboration GitHub', 'Design system cohérent', 'Communication technique'],
   },
@@ -39,10 +37,8 @@ const projects = [
     id: 4,
     title: 'Action Territoire',
     description: 'Tableau de bord pour visualiser les données d\'une API',
-    image: '',
-    tech: ['HTML', 'CSS', 'REST API'],
-    github: 'https://github.com',
-    live: 'https://example.com',
+    image: '/action.png',
+    tech: ['HTML', 'CSS', 'REST API', 'JavaScript'],
     challenges: ['Intégration API externe', 'Visualisation de données', 'Optimisation performance'],
     learnings: ['Requêtes HTTP', 'Traitement de données', 'Dataviz avec CSS/JS'],
   },
@@ -98,28 +94,7 @@ export default function Projects() {
                     </div>
 
                     {/* Links */}
-                    <div className="flex gap-3 pt-4 border-t border-gray-200">
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium flex-1 justify-center"
-                      >
-                        <Github className="w-4 h-4" />
-                        Code
-                      </a>
-                      {project.live && (
-                        <a
-                          href={project.live}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:shadow-lg transition-all text-sm font-medium flex-1 justify-center"
-                        >
-                          <ExternalLink className="w-4 h-4" />
-                          Voir
-                        </a>
-                      )}
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -129,7 +104,6 @@ export default function Projects() {
                 {/* Challenges Card */}
                 <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-xl p-6 border border-blue-200/50 shadow-md hover:shadow-lg transition-shadow duration-300">
                   <h4 className="text-lg font-bold text-blue-900 mb-4 flex items-center gap-2">
-                    <span className="text-xl">⚡</span>
                     Défis rencontrés
                   </h4>
                   <ul className="space-y-2">
@@ -145,7 +119,6 @@ export default function Projects() {
                 {/* Learnings Card */}
                 <div className="bg-gradient-to-br from-pink-50 to-pink-100/50 rounded-xl p-6 border border-pink-200/50 shadow-md hover:shadow-lg transition-shadow duration-300">
                   <h4 className="text-lg font-bold text-pink-900 mb-4 flex items-center gap-2">
-                    <span className="text-xl">💡</span>
                     Ce que j'ai appris
                   </h4>
                   <ul className="space-y-2">

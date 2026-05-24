@@ -9,31 +9,31 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg text-gray-700 leading-relaxed">
-             Salut ! Moi c'est Evanne. Mon aventure dans le web a commencé par une curiosité pour le design et s'est transformée en une véritable passion pour le code.
-             Ce que j'aime par-dessus tout ? C'est ce moment magique où une simple idée devient un site vivant, fluide et agréable à parcourir.
+             Hello ! Moi c'est Evanne. Mon aventure dans le développement a commencé par une curiosité pour le design et s'est transformée en une véritable passion pour le code.
+             Ce que j'aime par-dessus tout ? C'est ce moment magique où une simple idée devient un projet concret et qui peut avoir un lien avec le monde de l'entreprise.
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed">
               Je ne vois pas le développement comme une suite de lignes de code, mais comme une manière de donner vie à des projets qui ont du sens. Curieuse et un brin perfectionniste,
-               j'aime passer du temps à peaufiner les petits détails qui font sourire l'utilisateur.
+               j'aime passer du temps à peaufiner les petits détails qui font sourire l'utilisateur et moi également.
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed">
               En dehors du terminal, je suis toujours en quête de nouvelles inspirations, prête à apprendre une nouvelle technique ou à échanger sur un projet créatif.
-             Mon objectif est simple : construire des expériences web qui soient aussi belles à regarder qu'efficaces à utiliser.
+             Mon objectif est simple : construire un expérience et une identité à chacun de mes projets.
             </p>
 
-            <a
-              href="/Evanne KETTERING-4.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300"
-            >
-              Télécharger mon CV
-            </a>
-          </div>
+             <a
+               href="/Evanne KETTERING-4.pdf"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="inline-block mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300"
+             >
+               Télécharger mon CV
+             </a>
+           </div>
 
-          <div className="space-y-6">
+           <div className="space-y-6">
             <div className="bg-gradient-to-br from-purple-100 to-pink-100 p-8 rounded-2xl shadow-md">
               <h3 className="text-xl font-bold text-purple-900 mb-4">Mes passions</h3>
               <p className="text-gray-700">
@@ -52,7 +52,7 @@ export default function About() {
             <div className="bg-gradient-to-br from-pink-100 to-purple-100 p-8 rounded-2xl shadow-md">
               <h3 className="text-xl font-bold text-pink-900 mb-4">Ce que j'aime</h3>
               <p className="text-gray-700">
-                Les défis techniques, le design moderne, et les collaborations créatives.
+                Les défis techniques, la création de base données et les collaborations créatives.
               </p>
             </div>
           </div>
