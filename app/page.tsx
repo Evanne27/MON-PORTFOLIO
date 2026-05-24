@@ -1,6 +1,3 @@
-'use client';
-
-import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
@@ -12,15 +9,18 @@ import Contact from '@/components/Contact';
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <LearningJourney />
-      <Experiences />
-      <Contact />
-    </main>
+      
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <LearningJourney />
+        <Experiences />
+        <Contact />
+      </main>
+    </div>
   );
 }
