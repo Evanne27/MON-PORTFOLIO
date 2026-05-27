@@ -37,7 +37,7 @@ const projects = [
     id: 4,
     title: 'Action Territoire',
     description: 'Tableau de bord pour visualiser les données d\'une API',
-    image: '/action.png',
+    image: '/acter.png',
     tech: ['HTML', 'CSS', 'REST API', 'JavaScript'],
     challenges: ['Intégration API externe', 'Visualisation de données', 'Optimisation performance'],
     learnings: ['Requêtes HTTP', 'Traitement de données', 'Dataviz avec CSS/JS'],
